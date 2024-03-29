@@ -1,5 +1,6 @@
 import {Dimensions, ImageBackground, StyleSheet, View} from 'react-native';
 import Header from "./src/components/Header.js";
+import Informations from "./src/components/Informations";
 
 let backgroundImage = require("./assets/images/img.png");
 
@@ -9,6 +10,7 @@ export default function App() {
 		<View style={styles.container}>
 			<ImageBackground source={backgroundImage} style={styles.backgroundImage}>
 				<Header />
+				<Informations />
 			</ImageBackground>
 		</View>
 	);
