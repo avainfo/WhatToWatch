@@ -1,10 +1,12 @@
 import {Dimensions, Image, StyleSheet, View} from "react-native-web";
+import {TextInput} from "react-native";
 
 const Header = (props) => {
 	let logo = require("../../assets/images/logo.png");
 	return (
 		<View style={styles.header}>
 			<Image source={logo} style={styles.logo}/>
+			<TextInput onChangeText={(text) => console.log(text)} style={styles.input}/>
 		</View>
 	)
 }
