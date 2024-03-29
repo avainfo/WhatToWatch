@@ -14,7 +14,11 @@ const Header = (props) => {
 const styles = StyleSheet.create({
 	header: {
 		height: Dimensions.get("window").height / 10,
-		backgroundColor: "red",
+		flexDirection: "row",
+		justifyContent: "space-between",
+		alignItems: "center",
+		paddingLeft: Dimensions.get("window").width / 20,
+		paddingRight: Dimensions.get("window").width / 20,
 	},
 	logo: {
 		height: Dimensions.get("window").height / 12,
@@ -22,7 +26,11 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 	},
 	input: {
-		width: Dimensions.get("window").width / 2,
+		width: Dimensions.get("window").width /1.8,
+		height : "calc((100vh / 12) - 100vh / 24)",
+		backgroundColor: "rgba(255, 255, 255, 0.35)",
+		borderRadius: "50vh",
+		paddingLeft: "15px",
 	}
 })
 
