@@ -1,6 +1,5 @@
 import {Dimensions, ImageBackground, StyleSheet, View} from 'react-native';
 
-let imageSize = {};
 let backgroundImage = require("./assets/images/img.png");
 
 export default function App() {
