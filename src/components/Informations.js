@@ -1,34 +1,42 @@
-import {Component} from "react";
 import {StyleSheet, Text, View} from "react-native";
-import { Notation } from "./Notation";
+import {Notation} from "./Notation";
+import {Dimensions} from "react-native-web";
+import {LinearGradient} from "expo-linear-gradient";
 
 
-class Informations extends Component {
-
-	title = "Halo";
-	description = "Depicting an epic 26th-century conflict between humanity and an alien threat known as the Covenant, the series weaves deeply drawn personal stories with action, adventure and a richly imagined vision of the future.";
-
-	render() {
-		return (
-			<View style={styles.mainContent}>
-				<Text>
-					{this.title}
+const Informations = ({data}) => {
+	return (
+		<View>
+			<LinearGradient
+				colors={["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.3)", "rgba(0, 0, 0, 0.6)", "rgba(0, 0, 0, 0.6)", "rgba(0, 0, 0, 0.6)", "rgba(0, 0, 0, 0.3)", "rgba(0, 0, 0, 0)"]}
+				style={styles.mainContent}>
+				<Text style={styles.title}>
+					{data.title}
 				</Text>
 				<Notation rate={4}/>
-
-				<Text>
-					{this.description}
+				<Text style={styles.overview}>
+					{data.overview}
 				</Text>
-			</View>
-		)
-	}
+			</LinearGradient>
+		</View>
+	)
 }
 
 const styles = StyleSheet.create({
 	mainContent: {
-		backgroundColor: "blue",
-		paddingLeft: "20px",
-		paddingRight: "20px",
+		paddingTop: Dimensions.get("window").height / 15,
+		paddingBottom: Dimensions.get("window").height / 15,
+		paddingLeft: Dimensions.get("window").width / 20,
+		paddingRight: Dimensions.get("window").width / 20,
+	},
+	title: {
+		color: "#FFFFFF",
+		fontSize: 32,
+	},
+	overview: {
+		color: "#FFFFFF",
+		fontSize: 18,
+
 	}
 })
 
